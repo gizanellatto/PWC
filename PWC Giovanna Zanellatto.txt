@@ -1,0 +1,27 @@
+import java.util.Scanner;
+class Main{
+    public static void main(String[]args){
+       Scanner scanner = new Scanner(System.in);
+       
+       System.out.println("Informe o nome da rua e o numero, (sem pontuacao): ");
+       String entrada = scanner.nextLine();
+       
+       String[]endereco = entrada.split(" ");
+       String string1 = endereco[0];
+       String string2 = endereco[1];
+       
+        boolean inteiroOuNao = string1.matches("-?\\d+");
+        
+        if(inteiroOuNao == true){
+            System.out.println(string2 + "," + string1);
+        }
+        if(inteiroOuNao == false){
+            System.out.println(string1 +"," + string2);
+        }
+       
+       
+      
+       
+       scanner.close();
+    }
+}
